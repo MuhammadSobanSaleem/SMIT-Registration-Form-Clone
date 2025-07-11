@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMIT | Admission Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/Screenshot 2025-07-10 213558-no-bg.png" type="image/x-icon">
+    <script type="module" src="script.js" defer></script>
+    <!-- Include SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <header>
+        <img src="assets/logo.22bf709605809177256c.png" alt="Saylani Logo">
+        <div class="btn-h1-ul">
+            <button class="portal-btn"><a href="https://student.saylaniwelfare.com/" target="_blank"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M319.4 320.6L224 416l-95.4-95.4C57.1 323.7 0 382.2 0 454.4v9.6c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-9.6c0-72.2-57.1-130.7-128.6-133.8zM13.6 79.8l6.4 1.5v58.4c-7 4.2-12 11.5-12 20.3 0 8.4 4.6 15.4 11.1 19.7L3.5 242c-1.7 6.9 2.1 14 7.6 14h41.8c5.5 0 9.3-7.1 7.6-14l-15.6-62.3C51.4 175.4 56 168.4 56 160c0-8.8-5-16.1-12-20.3V87.1l66 15.9c-8.6 17.2-14 36.4-14 57 0 70.7 57.3 128 128 128s128-57.3 128-128c0-20.6-5.3-39.8-14-57l96.3-23.2c18.2-4.4 18.2-27.1 0-31.5l-190.4-46c-13-3.1-26.7-3.1-39.7 0L13.6 48.2c-18.1 4.4-18.1 27.2 0 31.6z"></path></svg><span class="ant-typography text_english normal_text">Student portal</span></a></button>
+            <h1>Registration Form - SMIT</h1>
+            <ul class="social">
+                <li><a href="https://www.facebook.com/saylani.smit" target="_blank"><img src="assets/facebook.0d22b4d986cc357e30b7.png" alt=""></a></li>
+                <li><a href="https://www.instagram.com/saylani.smit" target="_blank"><img src="assets/instagram.1506b398fa46f19bb324.png" alt=""></a></li>
+                <li><a href="https://www.youtube.com/@SaylaniMassITTraining" target="_blank"><img src="assets/youtube.25bcb63515915fad0160.png" alt=""></a></li>
+            </ul>
+        </div>
+        <p>Services - Education - Registration</p>
+    </header>
+    <form>
+        
+        <div class="form-group">
+            <label for="country">Select country</label>
+            <select id="country" required>
+                <option class="placeholder" value="">Select country</option>
+                <option value="Turkey">Turkey</option>
+                <option value="Pakistan">Pakistan</option>
+            </select>
+        </div>      
+        
+        <div class="form-group">
+            <label for="city">Select city</label>
+            <select id="city" required>
+                <option value="" disabled selected>Select city</option>
+                <option value="Karachi">Karachi</option>
+                <option value="Islamabad">Islamabad</option>
+                <option value="Lahore">Lahore</option>
+                <option value="Multan">Multan</option>
+                <option value="Sialkot">Sialkot</option>
+                <option value="Peshawar">Peshawar</option>
+            </select>
+        </div>        
+            
+        
+        <div class="form-group">
+            <label for="course">Select course</label>
+            <select id="course" required>
+                <option value="" disabled selected>Select course</option>
+                <option value="App Development">App Development</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Graphic Designing">Graphic Designing</option>
+                <option value="Video Edtiting">Video Edtiting</option>
+                <option value="Agentic AI">Agentic AI</option>
+                <option value="Modern Web & App Development">Modern Web & App Development</option>
+                <option value="Techno Kids">Techno Kids</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="Computer-Proficiency">Select your computer proficiency</label>
+            <select id="CP" required>
+                <option value="" disabled selected>Select your computer proficiency</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+        </div>        
+
+        
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" placeholder="Full name" id="name" required>
+        </div>
+            
+        
+        <div class="form-group">
+            <label for="fathername">Father Name</label>
+            <input type="text" placeholder="Father name" id="f-name" required>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="e-mail">Email</label>
+            <input type="email" placeholder="Email" id="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phonenumber">Phone</label>
+            <input type="tel" placeholder="Phone" id="phone" required>  
+        </div>        
+        
+        <div class="form-group">
+            <label for="c-nic">CNIC</label>
+            <input type="number" placeholder="CNIC" id="cnic" required>
+        </div>        
+        
+        <!-- <label for="father-c-nic">Father's CNIC (optional)</label>
+        <input type="number" placeholder="Father's CNIC (optional)" id="fcnic"> -->
+
+        <div class="form-group">
+
+            <label for="DateOfBirth">Date of birth</label>
+            <input type="date" id="dob" required >
+        </div>
+        
+        <div class="form-group">
+            <label for="gender">Select gender</label>
+            <select id="gender" required>
+                <option value="" disabled selected>Select gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>        
+            
+        <div class="form-group">
+
+            <label for="address">Address</label>
+            <input type="text" placeholder="Address" id="address" required>
+        </div>
+
+        <div class="form-group">
+
+            <label for="qualification">Last qualification</label>
+            <select id="qualification" required>
+                <option value="" disabled selected>Last qualification</option>
+                <option value="Matric">Matric</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Graduate">Graduate</option>
+                <option value="PhD">PhD</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+
+            <label for="laptop">Do you have a laptop</label>
+            <select id="laptop" required>
+                <option value="" disabled selected>Do you have a Laptop</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <button type="submit">SUBMIT</button>
+    </form>
+</body>
+</html>
