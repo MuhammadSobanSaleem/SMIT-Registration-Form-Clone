@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+}
+
+.main{
+    display: flex;
+    /* gap: 100px; */
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.container{
+    border-bottom: 2px dashed black;
+    border-top: 2px dashed black;
+    padding: 0 100px 0 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.container .side-logo{
+    transform: rotate(270deg);
+    height: 100px;
+    aspect-ratio: 3.6/1;
+    margin-right: -100px;
+}
+
+
+.card-container{
+    /* width: 330px; */
+    height: 450px;
+    aspect-ratio: 2.05/3;
+    border: 1px solid black;
+    position: relative;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    /* text-align: center; */
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    /* gap: 40px; */
+    height: 100%;
+    width: 100%;
+    margin-top: 55px;
+}
+
+.top-des{
+    position: absolute;
+    top: 0%;
+    max-width: 100%;
+}
+
+.bottom-des{
+    position: absolute;
+    bottom: 0%;
+    max-width: 100%;
+}
+
+.card-logo{
+    height: 53.18px;
+    /* width: 100px; */
+    margin-top: -10px;
+    aspect-ratio: 2.3/1;
+}
+
+.card-smit{
+    height: 53.18px;
+    aspect-ratio: 4/1;
+    margin-top: 16.36px;
+}
+
+.card-pfp{
+    border: 6px solid rgb(127, 202, 15);
+    appearance: none;
+    border-radius: 6.1px;
+    height: 106.36px;
+    aspect-ratio: 1/1;
+    margin-top: 16.36px;
+    object-fit: cover;
+}
+
+.card-name{
+    font-size: 19.64px;
+    font-weight: 100;
+    margin-top: 20.46px;
+}
+
+.card-course{
+    font-size: 18px;
+    font-weight: 100;
+    margin-top: 25.55px;
+}
+
+.card-roll-no{
+    font-size: 21.27px;
+    font-weight: 100;
+    margin-top: 20.46px;
+    
+}
+
+/* Card 2 */
+
+.container2{
+    border-left: 2px dashed black;
+    border-top: 2px dashed black;
+    border-bottom: 2px dashed black;
+    padding: 0 0px 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.container2 .side-logo{
+    transform: rotate(90deg);
+    height: 100px;
+    aspect-ratio: 3.6/1;
+    margin-left: -100px;
+}
+
+.card-content2{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    /* gap: 40px; */
+    height: 100%;
+    width: 100%;
+    margin-top: 45px;
+}
+
+.card-text2{
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+.card-smit2{
+    height: 53.18px;
+    aspect-ratio: 2.1/1;
+    margin-top: 16.36px;
+}
+
+.card-name2{
+    font-size: 13.09px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.card-f-name2{
+    font-size: 13.09px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.card-cnic2{
+    font-size: 13.09px;
+    font-weight: 600;
+    margin-top: 15px;
+    
+}
+
+.card-course2{
+    font-size: 13.09px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.card-logo2{
+    height: 53.18px;
+    /* width: 100px; */
+    margin-top: 64px;
+    aspect-ratio: 3.6/1;
+}
+
+span{
+    text-decoration: underline;
+    font-weight: 100;
+    font-size: 14.73px;
+}
+
+.card-container::before{
+    content: "";
+    background-image: url("../assets/Screenshot 2025-07-10 213558-no-bg.png");
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 351.83px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    inset: 49.09px 0px 0 -21.27px;
+    z-index: -1;
+    opacity: .1;
+}

@@ -27,8 +27,13 @@
             </ul>
         </div>
         <p>Services - Education - Registration</p>
+        <div class="tab-slider">
+            <button class="registration-btn">Registration</button>
+            <button class="id-btn">Download ID Card</button>
+        </div>
     </header>
-    <form>
+
+    <form class="main-form">
         
         <div class="form-group">
             <label for="country">Select country</label>
@@ -62,6 +67,7 @@
                 <option value="Graphic Designing">Graphic Designing</option>
                 <option value="Video Edtiting">Video Edtiting</option>
                 <option value="Agentic AI">Agentic AI</option>
+                <option value="Generative AI">Agentic AI</option>
                 <option value="Modern Web & App Development">Modern Web & App Development</option>
                 <option value="Techno Kids">Techno Kids</option>
             </select>
@@ -150,8 +156,52 @@
                 <option value="No">No</option>
             </select>
         </div>
+        
+        <div class="form-group" id="image-upload">
+            <div class="image-container">
+                <label for="pfp">Picture (5MB or less)</label>
+                <div class="file-wrapper">
+                    <div class="pfp-preview">+ Upload</div>
+                    <input type="file" accept="image/*" id="pfp">
+                </div>
+            </div>
+            <p>
+                - With white or blue background <br>
+                - File size must be less than 5MB <br>
+                - File type: jpg, jpeg, png <br>
+                - Your Face should be clearly visible <br>
+                - Upload your recent passport size picture
+            </p>
+        </div>
 
         <button type="submit">SUBMIT</button>
     </form>
+
+    <form class="id-form">
+        <div class="form-group">
+            <label for="CNIC" class="id-cnic">CNIC (Which you provided during form submission)</label>
+            <input type="number" placeholder="CNIC (Which you provided during form submission)" class="id-input">
+        </div>
+        <button type="submit">SUBMIT</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 50vw; max-width: 320px;">Course / Event</td>
+                <th style="width: 10vw; max-width: 100px; border-left: 1.4px solid rgba(181, 181, 181, 0.304);">Batch</td>
+                <th style="width: 20vw; max-width: 120px; border-left: 1.4px solid rgba(181, 181, 181, 0.304);">Action</td>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <iframe id="card-frame" src="card.html" style="position: absolute;
+         top: -10000px;
+         left: -10000px;
+         width: 800px;
+         height: 600px;
+         border: none;"></iframe>
+
 </body>
 </html>
