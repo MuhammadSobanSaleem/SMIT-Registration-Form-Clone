@@ -88,29 +88,6 @@ form.addEventListener("submit", async (e) => {
 
 });
 
-const idCardBtn = document.querySelector(".id-btn")
-
-idCardBtn.addEventListener("click", function(){
-    document.querySelector(".main-form").style.display = "none"
-    document.querySelector(".id-form").style.display = "flex"
-    idCardBtn.style.color = "#8dc63f"
-    idCardBtn.style.backgroundColor = "#fff"
-    regBtn.style.color = "#0d6db7"
-    regBtn.style.backgroundColor = "rgb(250, 250, 250)"
-})
-
-const regBtn = document.querySelector(".registration-btn")
-
-regBtn.addEventListener("click", function(){
-    document.querySelector(".id-form").style.display = "none"
-    document.querySelector(".main-form").style.display = "flex"
-    table.style.display = "none"
-    regBtn.style.color = "#8dc63f"
-    regBtn.style.backgroundColor = "#fff"
-    idCardBtn.style.color = "#0d6db7"
-    idCardBtn.style.backgroundColor = "rgb(250, 250, 250)"
-})
-
 // Document Values
 
 let batch;
@@ -121,6 +98,8 @@ let docPfp;
 let docCNIC;
 let courseAbbr;
 let fName;
+const tBody = document.querySelector("tbody")
+const table = document.querySelector("table")
 
 // data sender card function 
 
@@ -141,8 +120,6 @@ idForm.addEventListener("submit", async function(e){
 
     const filterDocs = query(collection(db, "SMIT - Registrations"), where("cnic", "==", idInputVal))
     const filteredDocs = await getDocs(filterDocs)
-    const tBody = document.querySelector("tbody")
-    const table = document.querySelector("table")
     
     if(!filteredDocs.empty){
 
@@ -213,14 +190,15 @@ idForm.addEventListener("submit", async function(e){
             <td style="width: 20vw; max-width: 120px;"><button class="id-download" data-card='${encodedCardData}'>DOWNLOAD</button></td>
             </tr>`;
 
-            tBody.addEventListener("click", (e) => {
-                if (e.target.classList.contains("id-download")) {
-                    const encodedData = e.target.getAttribute("data-card");
-                    downloadCard(encodedData);
-                }
-                });
         })
-
+        
+        tBody.addEventListener("click", (e) => {
+            if (e.target.classList.contains("id-download")) {
+                const encodedData = e.target.getAttribute("data-card");
+                downloadCard(encodedData);
+            }
+            });
+            
         table.style.display = "block"
     }else{
         Swal.fire({
@@ -231,6 +209,34 @@ idForm.addEventListener("submit", async function(e){
         idInput.value = ""
     }
 });
+
+
+// Tab Buttons
+
+const idCardBtn = document.querySelector(".id-btn")
+
+idCardBtn.addEventListener("click", function(){
+    document.querySelector(".main-form").style.display = "none"
+    document.querySelector(".id-form").style.display = "flex"
+    idCardBtn.style.color = "#8dc63f"
+    idCardBtn.style.backgroundColor = "#fff"
+    regBtn.style.color = "#0d6db7"
+    regBtn.style.backgroundColor = "rgb(250, 250, 250)"
+})
+
+const regBtn = document.querySelector(".registration-btn")
+
+regBtn.addEventListener("click", function(){
+    document.querySelector(".id-form").style.display = "none"
+    document.querySelector(".main-form").style.display = "flex"
+    table.style.display = "none"
+    regBtn.style.color = "#8dc63f"
+    regBtn.style.backgroundColor = "#fff"
+    idCardBtn.style.color = "#0d6db7"
+    idCardBtn.style.backgroundColor = "rgb(250, 250, 250)"
+    tBody.innerHTML = ``
+})
+
 
 
 window.addEventListener("load", function () {
